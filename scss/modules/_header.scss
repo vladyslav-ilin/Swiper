@@ -1,0 +1,91 @@
+.slider{
+  padding: 50px 0;
+  text-align: center;
+  color: #303030;
+  &__wrapper{
+    text-align: center;
+  }
+  &__items{
+    position: relative;
+  }
+  &__subtitle{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  &__title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 86px;
+    width: 70%;
+    margin: 0 auto 90px;
+  }
+  &__content{
+    @include size(440px, 330px);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    &:hover{
+      & .slider__bgr{
+        opacity: 1;
+      }
+    }
+  }
+  &__img{
+    max-width: 100%;
+    display: block;
+  }
+  &__box{
+    position: relative;
+  }
+  &__plus{
+    @include pos($t: -25px, $r:175px, $pos: absolute);
+    font-size: 45px;  
+    color: #e98457;
+  }
+  &__bgr{
+    @include size(100%);
+    background: rgba(27,241,173,.8);
+    @include align(true, true, absolute);
+    opacity: 0;
+    transition: all .5s ease;
+  }
+  &__name{
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    @include pos($l: 30px, $b: 60px);
+    width: 60%;
+    text-align: left;
+  }
+  &__text{
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #fff;
+    @include pos($l: 30px, $b: 35px);
+    text-transform: uppercase;
+  }
+  &__next,
+  &__prev{
+    @include size(95px);
+    transform: translateY(-20px);
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: all .3s ease;
+    &:hover{
+      color: #fff;
+      background: #000;
+    }
+  }
+  &__prev{
+    transform: translateX(-115px);
+  }
+  &__cont{
+    position: relative;
+  }
+}
