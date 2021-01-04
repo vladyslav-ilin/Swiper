@@ -83,7 +83,7 @@ body {
 
 .container-fluid {
   width: 100%;
-  max-width: 1650px;
+  max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -112,17 +112,18 @@ body {
 .slider__title {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 86px;
+  font-size: 56px;
   width: 70%;
   margin: 0 auto 90px;
 }
 
 .slider__content {
-  width: 440px;
-  height: 330px;
+  width: 300px;
+  height: 220px;
   overflow: hidden;
   position: relative;
   text-align: center;
+  cursor: pointer;
 }
 
 .slider__content:hover .slider__bgr {
@@ -185,10 +186,10 @@ body {
 }
 
 .slider__next, .slider__prev {
-  width: 95px;
-  height: 95px;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  width: 70px;
+  height: 70px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   color: #000;
   border: 1px solid #000;
   border-radius: 50%;
@@ -208,4 +209,25 @@ body {
 
 .slider__cont {
   position: relative;
+}
+
+.slider__cont::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 5;
+  background: -webkit-gradient(linear, right top, left top, from(#fff), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to left, #fff, rgba(0, 0, 0, 0));
+  content: '';
+  pointer-events: none;
+}
+
+.swiper-button-next::after {
+  font-size: 35px;
+}
+
+.swiper-button-prev::after {
+  font-size: 35px;
 }

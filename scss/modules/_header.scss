@@ -17,15 +17,16 @@
   &__title{
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 86px;
+    font-size: 56px;
     width: 70%;
     margin: 0 auto 90px;
   }
   &__content{
-    @include size(440px, 330px);
+    @include size(300px, 220px);
     overflow: hidden;
     position: relative;
     text-align: center;
+    cursor: pointer;
     &:hover{
       & .slider__bgr{
         opacity: 1;
@@ -71,8 +72,8 @@
   }
   &__next,
   &__prev{
-    @include size(95px);
-    transform: translateY(-20px);
+    @include size(70px);
+    transform: translateY(-10px);
     color: #000;
     border: 1px solid #000;
     border-radius: 50%;
@@ -87,5 +88,25 @@
   }
   &__cont{
     position: relative;
+    &::before{
+      @include pos($r: 0, $t: 0);
+      @include size(250px, 100%);
+      z-index: 5;
+      background: linear-gradient(to left, #fff, rgba(0, 0, 0, 0));
+      content: '';
+      pointer-events: none;
+    }
+  }
+}
+
+.swiper-button-next{
+  &::after{
+    font-size: 35px;
+  }
+}
+
+.swiper-button-prev{
+  &::after{
+    font-size: 35px;
   }
 }

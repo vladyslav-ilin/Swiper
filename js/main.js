@@ -5,7 +5,7 @@ new Swiper('.slider__items', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 3.6,
+  slidesPerView: 3.7,
   spaceBetween: 45,
   loop: true, 
   freeMode: true,
